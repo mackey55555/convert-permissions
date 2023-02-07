@@ -1,18 +1,9 @@
-name: Move a task to a different section
-
-on:
-  pull_request:
-    types: [opened]
+on: [push]
 
 jobs:
-  sync:
+  hello-world:
     runs-on: ubuntu-latest
+    name: Greeting
     steps:
-      # - uses: everphone-gmbh/github-asana-action@385529c13a4c0d311ac611ef4049f5a6ccf1048e
-      - uses: insurify/github-asana-action@v1.0.5
-        continue-on-error: true
-        with:
-          asana-pat: ${{ secrets.ASANA_SECRET }}
-          task-comment: 'View Pull Request Here: '
-          trigger-phrase: 'Asana Task:'
-          targets: '[{"project": "github連携テスト", "section": "DEV"}, {"project": "github連携テスト", "section": "REVIEW"}]'
+      - name: Hello
+        uses: mackey55555/github-asana-plugin@v1.0.0
