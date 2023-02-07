@@ -15,4 +15,4 @@ jobs:
           asana-pat: ${{ secrets.ASANA_SECRET }}
           task-comment: 'View Pull Request Here: '
           trigger-phrase: 'Asana Task:'
-          targets: '[{"project": "github連携テスト", "section": "REVIEW"}]'
+          targets: '[{"project": "github連携テスト", "section": "DEV"}, {"project": "github連携テスト", "section": "REVIEW"}]'
