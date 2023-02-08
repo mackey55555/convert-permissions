@@ -6,6 +6,6 @@ jobs:
     name: Greeting
     steps:
       - name: Hello
-        uses: mackey55555/github-asana-plugin@v1.0.0
+        uses: mackey55555/github-asana-plugin@v1.0.1
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
