@@ -1,13 +1,16 @@
-on: [push]
+name: Move a task to a different section
+
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
-  hello-world:
+  sync:
     runs-on: ubuntu-latest
-    name: Greeting
     steps:
-      - name: Hello2
-        uses: mackey55555/asana-github-plugin@v1.0.0
+      - uses: everphone-gmbh/github-asana-action@385529c
+        continue-on-error: true
         with:
-          asana-secret: ${{ secrets.ASANA_SECRET }}
-          milliseconds: 1002
-        # with:
+          asana-pat: ${{ secrets.ASANA_PAT }}
+          action: 'move-section'
+          targets: '[{"project": "github連携テスト", "section": "REVIEW"}]'
