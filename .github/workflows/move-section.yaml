@@ -9,5 +9,5 @@ jobs:
         uses: mackey55555/asana-github-plugin@v1.0.0
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          milliseconds: 1000
+          milliseconds: 1001
         # with:
