@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Greeting
     steps:
-      - name: Hello
+      - name: Hello2
         uses: mackey55555/asana-github-plugin@v1.0.0
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          milliseconds: 1002
+          milliseconds: 1001
         # with:
