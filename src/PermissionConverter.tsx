@@ -1,4 +1,3 @@
-// PermissionConverter.tsx
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -41,6 +40,17 @@ const PermissionConverter: React.FC = () => {
 
   const [conversionType, setConversionType] =
     useState<ConversionType>("textToNumeric");
+
+  // AdSenseのスクリプトを挿入する
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3556606235552037";
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    document.body.appendChild(script);
+  }, []);
+
   const convertToNumeric = (permission: string): string => {
     const permissionMap: { [key: string]: number } = {
       r: 4,
