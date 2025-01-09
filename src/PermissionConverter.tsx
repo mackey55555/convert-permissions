@@ -45,7 +45,7 @@ const PermissionConverter: React.FC = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3556606235552037";
+      "https://adm.shinobi.jp/s/8a76f3b6ab6d540ea99edc699fd00623";
     script.async = true;
     script.crossOrigin = "anonymous";
     document.body.appendChild(script);
